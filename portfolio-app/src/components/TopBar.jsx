@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './TopBar.css';
+import logo from '../assets/logo.svg';
 
 const TopBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -9,25 +10,34 @@ const TopBar = () => {
     const closeMenu = () => setMenuOpen(false);
 
     return (
-        <nav className="top-bar">
-            <span className="top-bar-title">Thomas Bezemer</span>
-            
-            <div className="nav-links desktop-links">
-                <Link to="/">Home</Link>
-                <Link to="/projects">Projects</Link>
-            </div>
+        <>
+            <nav className="top-bar">
+                <div className="top-bar-brand">
+                    <img src={logo} alt="Logo" className="top-bar-icon" />
+                    
+                </div>
 
-            <button className="burger-btn" onClick={toggleMenu} aria-label="Toggle menu">
-                <span className={`burger-icon ${menuOpen ? 'open' : ''}`}></span>
-            </button>
+                <div>
+                    <span className="top-bar-title">Thomas Bezemer</span>
+                </div>
+
+                <div className="nav-links desktop-links">
+                    <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
+                    <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : '')}>Projects</NavLink>
+                </div>
+
+                <button className="burger-btn" onClick={toggleMenu} aria-label="Toggle menu">
+                    <span className={`burger-icon ${menuOpen ? 'open' : ''}`}></span>
+                </button>
+            </nav>
 
             {menuOpen && <div className="mobile-overlay" onClick={closeMenu}></div>}
-            
+
             <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-                <Link to="/" onClick={closeMenu}>Home</Link>
-                <Link to="/projects" onClick={closeMenu}>Projects</Link>
+                <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Home</NavLink>
+                <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : '')} onClick={closeMenu}>Projects</NavLink>
             </div>
-        </nav>
+        </>
     );
 };
 

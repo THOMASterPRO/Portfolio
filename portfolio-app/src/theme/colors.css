@@ -1,0 +1,23 @@
+:root {
+  --primary: #007AFF;
+  --background: #0c0c0c;
+  --content: #2C2C2C;
+  --header: #000000;
+  --burger: #0a0a0a;
+  --block: #272727;
+  --info: #232323;
+  --hover: #444;
+  --current: #333333;
+  --text: #fff;
+  --textInv: #000;
+  --floating: #363636;
+  --text-secondary: #e0e0e0;
+  --text-muted: #888;
+  --divider: #666;
+  --divider-light: #ccc;
+  --modal-bg: rgba(0, 0, 0, 0.4);
+  --modal-content: var(--block);
+  --modal-text: var(--text);
+  --modal-text-secondary: var(--text-secondary);
+  --modal-button: var(--start);
+}

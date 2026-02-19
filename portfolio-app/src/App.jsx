@@ -1,5 +1,6 @@
 import { Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import './theme/colors.css';
 import TopBar from './components/topBar';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
