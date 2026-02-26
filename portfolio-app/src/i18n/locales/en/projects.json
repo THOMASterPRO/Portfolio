@@ -1,0 +1,13 @@
+{
+  "pageTitle": "Projects",
+  "cards": {
+    "sphaeraOne": {
+      "title": "Sphaera One",
+      "imageAlt": "Sphaera One project"
+    },
+    "allergyCard": {
+      "title": "Allergy Card",
+      "imageAlt": "Allergy Card project"
+    }
+  }
+}

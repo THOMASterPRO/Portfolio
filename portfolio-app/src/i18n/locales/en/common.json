@@ -1,0 +1,14 @@
+{
+  "topbar": {
+    "name": "Thomas Bezemer",
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "menuToggle": "Toggle menu",
+    "language": {
+      "label": "Language"
+    }
+  }
+}

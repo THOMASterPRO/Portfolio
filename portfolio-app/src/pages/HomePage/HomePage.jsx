@@ -1,7 +1,11 @@
+import { useT } from '../../i18n/useT';
+
 function Home() {
+    const t = useT('home');
+
     return (
         <>
-            <h1>Home page</h1>
+            <h1>{t('pageTitle')}</h1>
         </>
     )
 }

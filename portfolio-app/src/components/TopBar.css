@@ -64,6 +64,25 @@
     gap: 1.5rem;
 }
 
+.top-bar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.language-btn {
+    color: var(--text);
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 2px;
+    padding: 0.3rem 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.language-btn:hover {
+    background-color: var(--hover);
+}
 
 
 .mobile-menu {
